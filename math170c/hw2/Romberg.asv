@@ -1,0 +1,16 @@
+function I = Romberg(f,a,b,n)
+    %UNTITLED2 Summary of this function goes here
+    %Detailed explanation goes here
+    h = b-a;
+    R(0, 0) = (b-a)*(f(a)+f(b))/2;
+    
+    for m = 1:n
+        h=h/2;
+        i=1:2^(m-1);
+        R(m,0)= R(m-1,0)/2 + h*sum( f(a+(2*i-1)*h) );
+        for m=1:m
+            
+        end
+    end
+end
+
