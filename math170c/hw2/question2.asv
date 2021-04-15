@@ -1,0 +1,8 @@
+syms x y z;
+n = 2.^(1:10);
+f = cos(2*x);
+actual = int(f,0,10);
+errors = zeros(10,1);
+for i=1:10
+   errors(i,1)=actual - Simpson(f,0,10); 
+end
